@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaTshirt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,10 +12,11 @@ const Footer = () => {
             <FaTshirt size={40} className="text-primary mb-3" />
             <h4 className="mb-3">Garment Management System</h4>
             <div className="d-flex justify-content-center gap-4 mb-3">
-              <a href="javascript:void(0);" className="text-secondary text-decoration-none">About</a>
-              <a href="javascript:void(0);" className="text-secondary text-decoration-none">Services</a>
-              <a href="javascript:void(0);" className="text-secondary text-decoration-none">Contact</a>
-              <a href="javascript:void(0);" className="text-secondary text-decoration-none">Privacy</a>
+              <Link to="/about" className="text-secondary text-decoration-none">About</Link>
+              <Link to="/services" className="text-secondary text-decoration-none">Services</Link>
+              <Link to="/contact" className="text-secondary text-decoration-none">Contact</Link>
+              <Link to="/privacy" className="text-secondary text-decoration-none">Privacy</Link>
+              <Link to="/admin" className="text-secondary text-decoration-none">Admin</Link>
             </div>
             <p className="text-secondary mb-0">© 2025 Garment Management System. All rights reserved.</p>
           </Col>
