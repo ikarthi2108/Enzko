@@ -171,7 +171,7 @@ const Admin = () => {
                   </div>
                   <div>
                     <h6 className="mb-1">Average Price</h6>
-                    <h3 className="mb-0">${stats.averagePrice}</h3>
+                    <h3 className="mb-0">₹{stats.averagePrice}</h3>
                   </div>
                 </div>
               </Card.Body>
@@ -267,7 +267,7 @@ const Admin = () => {
                         <td>{order.minQty}</td>
                         <td>
                           <Badge bg="success" pill>
-                            ${order.price}
+                          ₹{order.price}
                           </Badge>
                         </td>
                         <td>

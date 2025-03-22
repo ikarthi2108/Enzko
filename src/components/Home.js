@@ -4,6 +4,7 @@ import { Container, Nav, Navbar, Button, Card, Form, Row, Col, Badge } from 'rea
 import { FaTshirt, FaUsersCog, FaShoppingBag, FaPhone, FaArrowRight, FaCheckCircle, FaClock, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import NavigationBar from './NavigationBar';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -25,29 +26,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <Navbar 
-        variant="dark" 
-        fixed="top" 
-        expand="lg"
-        className={`transition-all duration-300 ${isScrolled ? 'bg-dark py-2' : 'bg-transparent py-3'}`}
-      >
-        <Container>
-          <Navbar.Brand href="#" className="d-flex align-items-center">
-            <FaTshirt className="me-2" size={24} />
-            <span className="fw-bold">GMS</span>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarNav" />
-          <Navbar.Collapse id="navbarNav">
-            <Nav className="ms-auto">
-              <Nav.Link href="#home" className="mx-2">Home</Nav.Link>
-              <Nav.Link href="about" className="mx-2">About</Nav.Link>
-              <Nav.Link href="#services" className="mx-2">Services</Nav.Link>
-              <Nav.Link href="#contact" className="mx-2">Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar> */}
-
+    <NavigationBar/>
       {/* Hero Section */}
       <section id="home" className="position-relative min-vh-100 d-flex align-items-center overflow-hidden" 
         style={{
@@ -94,7 +73,7 @@ const Home = () => {
                   src="https://images.pexels.com/photos/3735641/pexels-photo-3735641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                   alt="Garment Management" 
                   className="img-fluid rounded-lg shadow-2xl"
-                  style={{ transform: 'perspective(1000px) rotateY(-15deg)' }}
+                  style={{ transform: 'perspective(1000px) rotateY(-15deg)', maxWidth: '100%' }}
                 />
                 <div className="position-absolute top-0 start-0 w-100 h-100 bg-gradient-to-r from-primary to-transparent opacity-10"></div>
               </div>
@@ -265,6 +244,13 @@ const Home = () => {
         }
         .shadow-2xl {
           box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        body, html {
+          overflow-x: hidden;
+        }
+        .container-fluid {
+          padding-left: 0;
+          padding-right: 0;
         }
       `}</style>
     </>
