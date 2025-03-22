@@ -50,7 +50,7 @@ const Admin = () => {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:5000/api/orders");
+      const res = await axios.get("https://enzko.onrender.com/api/orders");
       setOrders(res.data);
     } catch (error) {
       console.error("Error fetching orders:", error);
@@ -77,9 +77,9 @@ const Admin = () => {
   const handleSubmit = async () => {
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/order/${editId}`, orderData);
+        await axios.put(`https://enzko.onrender.com/api/order/${editId}`, orderData);
       } else {
-        await axios.post("http://localhost:5000/api/order", orderData);
+        await axios.post("https://enzko.onrender.com/api/order", orderData);
       }
       fetchOrders();
       handleClose();
@@ -97,7 +97,7 @@ const Admin = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this order?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/order/${id}`);
+        await axios.delete(`https://enzko.onrender.com/api/order/${id}`);
         fetchOrders();
       } catch (error) {
         console.error("Error deleting order:", error);

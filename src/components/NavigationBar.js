@@ -25,7 +25,7 @@ const NavigationBar = () => {
       <Container>
         <Navbar.Brand className="d-flex align-items-center overflow-hidden">
           <FaTshirt className="me-2" size={24} />
-          <Link to="/" className="fw-bold text-decoration-none text-light">GMS</Link>
+          <Link to="/" className="fw-bold text-decoration-none text-light">Enzko garment apparel</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarNav" />
         <Navbar.Collapse id="navbarNav">

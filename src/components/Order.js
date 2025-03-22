@@ -33,7 +33,7 @@ const Order = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/orders");
+      const res = await axios.get("https://enzko.onrender.com/api/orders");
       setProducts(res.data);
       
       // Initialize quantities object with minimum quantities
@@ -114,7 +114,7 @@ const Order = () => {
 
       await new Promise((resolve) => setTimeout(resolve, 3000));
 
-      await axios.post("http://localhost:5000/api/received-orders", {
+      await axios.post("https://enzko.onrender.com/api/received-orders", {
         items: cart,
         contact,
         address,
